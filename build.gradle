@@ -1,0 +1,26 @@
+plugins {
+  id 'org.springframework.boot' version '2.4.3'
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'java'
+}
+
+//mainClassName = 'com.office.EmployeePortalApplication'
+
+repositories { 
+    mavenCentral() 
+}
+
+jar {
+    archiveBaseName = 'EmployeePortal'
+    archiveVersion =  '1.0'
+}
+
+//sourceCompatibility = 1.8
+//targetCompatibility = 1.8
+
+dependencies {
+ implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.3'
+ //implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.4.3'
+ implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.3'
+ testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.4.3'
+}
